@@ -1,0 +1,1 @@
+o projeto envolve pegar todos os dados do bolsa familia de janeiro a novembro de 2021 e classificar os mesmos como base em nome,quantidades de vezes que o nome aparece e o valor total recebido pela pessoa
