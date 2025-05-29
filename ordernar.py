@@ -1,7 +1,7 @@
 import pandas as pd
 
-# Define o caminho do arquivo CSV (use raw string ou barras invertidas duplas)
-caminho_csv = r"C:\Users\jokin\OneDrive\Área de Trabalho\paralelismo\bolsa familia\202102_BolsaFamilia_Pagamentos.csv"
+# Define o caminho do arquivo CSV 
+caminho_csv = r"C:\Users\jokin\OneDrive\Área de Trabalho\paralelismo\bolsa familia\BolsaFamilia_Consolidado_2021.csv"
 
 # Lê o arquivo CSV (assumindo que a coluna de nomes se chama 'NOME FAVORECIDO' - comum no Bolsa Família)
 try:
