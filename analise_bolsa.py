@@ -70,7 +70,7 @@ def processar_dados(caminho):
         print("\nDica: Verifique se:")
         print("- O arquivo não está corrompido")
         print("- O delimitador é ';'")
-        print("- A codificação é 'iso-8859-1'")
+        print("- A codificação é 'utf-8'")
         return None
 
 def mostrar_resultados(resultados):
