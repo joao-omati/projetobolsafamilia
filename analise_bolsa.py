@@ -22,14 +22,21 @@ def verificar_arquivo(caminho):
     return True
 
 def processar_dados(caminho):
-    
     try:
-        # Carrega apenas colunas necessárias (otimização de memória)
-        colunas = ['NIS FAVORECIDO', 'VALOR PARCELA', 'NOME MUNICÍPIO', 'UF']
+        # Mostra os nomes das colunas reais no arquivo
+        temp = pd.read_csv(caminho, sep=';', encoding='utf-8', nrows=0)
+        print("\n🧾 Colunas disponíveis no CSV:")
+        for col in temp.columns:
+            print(repr(col))  # Usa repr para mostrar espaços invisíveis ou erros de acento
+
+        # Agora você pode copiar o nome correto daqui e substituir abaixo
+        colunas = ['NIS FAVORECIDO', 'VALOR PARCELA', 'NOME MUNICÍPIO', 'UF']  # Ajuste se necessário
+
+        # Carrega os dados
         df = pd.read_csv(
             caminho,
             sep=';',
-            encoding='iso-8859-1',
+            encoding='utf-8',
             usecols=colunas,
             dtype={'NIS FAVORECIDO': 'str', 'UF': 'category'}
         )
@@ -59,7 +66,7 @@ def processar_dados(caminho):
         return stats
         
     except Exception as e:
-        print(f"❌ Erro no processamento: {str(e)}")
+        print(f"\n❌ Erro no processamento: {str(e)}")
         print("\nDica: Verifique se:")
         print("- O arquivo não está corrompido")
         print("- O delimitador é ';'")
